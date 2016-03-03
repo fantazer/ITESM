@@ -7,7 +7,41 @@ body
 		.main-left
 			.left-logo 
 				span ITESM
+			.left-menu
+				- var menu = [' Мои страницы ',' Управление инцидентами ',' Управление запросами на обслуживание ',' Управление проблемами ',' Управление изменениями ']
+				- each val in menu 
+					.left-menu-el
+						.left-menu-el-top
+							.left-menu-el-icon
+								.icon-My_pages
+							.left-menu-el-text #{val}
+						.left-menu-el-sub-wrap
+							.left-menu-el-sub
+								.left-menu-el-sub-icon
+									.icon-Workplace
+								.left-menu-el-sub-text Рабочее место
+							.left-menu-el-sub
+								.left-menu-el-sub-icon
+									.icon-Mypage
+								.left-menu-el-sub-text Моя страница
+							.left-menu-el-sub
+								.left-menu-el-sub-icon
+									.icon-Catalog
+								.left-menu-el-sub-text Каталог услуг
+							.left-menu-el-sub
+								.left-menu-el-sub-icon
+									.icon-Mytasks
+								.left-menu-el-sub-text Мои задачи
+							.left-menu-el-sub
+								.left-menu-el-sub-icon
+									.icon-Knowledge
+								.left-menu-el-sub-text База знаний
+							.left-menu-el-sub
+								.left-menu-el-sub-icon
+									.icon-Settings
+								.left-menu-el-sub-text Мои настройки
 		.main-right
+			//Top menu
 			.main-right-head
 				.main-right-head-input
 					input(type="text")
@@ -18,6 +52,76 @@ body
 					.icon-Message
 						.main-right-head-message-val 15
 				.main-right-head-name
+					.main-right-head-name-inic 
+						span ИИ
+					.main-right-head-name-text Иванов Иван Иванович
+			//Tabs
+			.main-right-top-tabs
+				.main-right-top-tabs-el.main-right-top-tabs-el-active
+					span Портал
+				.main-right-top-tabs-el
+					span Инциденты
+				.main-right-top-tabs-el
+					span Запросы 
+				.main-right-top-tabs-el
+					span Изменения
+				.main-right-top-tabs-el
+					span Согласования
+			//Main-content
+			.main-right-content
+				.service-line
+					.service-line-el
+						.service-line-el-icon
+							.icon-technology-call
+						.service-line-el-text Сообщить о проблеме
+					.service-line-el
+						.service-line-el-icon
+							.icon-tool
+						.service-line-el-text Запросить услугу
+					.service-line-el
+						.service-line-el-icon
+							.icon-questions
+						.service-line-el-text Получит консультацию
+					.service-line-el
+						.service-line-el-icon
+							.icon-stack-of-books-and-magnifier
+						.service-line-el-text Поиск по базе знаний
+				.main-right-content-wraper
+					.col-open-message
+						.main-right-content-wraper-title Открытые обращения
+						- var progress = [20,81,39]
+						- each val in progress 
+							.col-open-message-el
+								.col-open-message-el-icon
+									.icon-Information
+								.col-open-message-el-date 23.12.2015
+								.col-open-message-el-title <span>№ INC203</span> № INC203  Не работает Интернет. е могу загрузить даже стартовую страницу веб-приложения
+								.col-open-message-el-service
+									.col-open-message-el-service-icon
+										.icon-Operator
+									.col-open-message-el-service-text Служба поддержки пользователей
+								.col-open-message-el-status
+									.col-open-message-el-status-left
+										.col-open-message-el-status-text Статус: <span>Зарегистрировано</span>
+									.col-open-message-el-status-right
+										.col-open-message-el-status-bar
+											.col-open-message-el-status-bar-val(data-progress="#{val}")
 
+					.col-news
+						.main-right-content-wraper-title Новости
+						- for (var x = 0; x < 3; x++)
+							.col-news-el
+								.col-news-el-date 23.02.2016
+								.col-news-el-titleУслуга временно недоступна
+								.col-news-el-text Услуга А временно неактивна с 17.00 23.03.2016 до 11.00 16.06.2016 по причине ведения технических работ. 
+					
+					.col-top-message
+						.main-right-content-wraper-title Топ статей в Базе знаний
+						- for (var x = 0; x < 4; x++)
+							.col-top-message-el
+								.col-top-message-el-icon
+									.icon-Base
+								.col-top-message-el-text
+									span Как создать запрос на обслуживание?
 	//Include Footer
 	include ./block_html/script.jade

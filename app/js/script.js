@@ -10,7 +10,22 @@
  })(jQuery);*/ 
 
 $(document).ready(function(){
-
+	$('.left-menu-el').click(function(){
+		$(this).find('.left-menu-el-sub-wrap').slideToggle()
+	})
+	$('.col-open-message-el-status-bar-val').each(function(){
+		var progress = $(this).data('progress');
+		$(this).css('width',progress+'%')
+		if(progress<30 && progress>0){
+			$(this).css('background-color','#00B8DF')
+		}
+		if(progress<50 && progress>30){
+			$(this).css('background-color','#00CE74')
+		}
+		if( progress>70){
+			$(this).css('background-color','#E1523E')
+		}
+	})
 	/* ###### init EasyDropDown style for selects  ######*/
 	/* ###### bower i easydropdown  ######*/
 	/*<select class="dropdown"> add class (dropdown)
