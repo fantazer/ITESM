@@ -4,57 +4,12 @@ html(lang="en")
 	include ./block_html/head.jade
 body
 	.main-cont
-		.main-left
-			.left-logo 
-				span ITESM
-			.left-menu
-				- var menu = [' Мои страницы ',' Управление инцидентами ',' Управление запросами на обслуживание ',' Управление проблемами ',' Управление изменениями ']
-				- each val in menu 
-					.left-menu-el
-						.left-menu-el-top
-							.left-menu-el-icon
-								.icon-My_pages
-							.left-menu-el-text #{val}
-						.left-menu-el-sub-wrap
-							.left-menu-el-sub
-								.left-menu-el-sub-icon
-									.icon-Workplace
-								.left-menu-el-sub-text Рабочее место
-							.left-menu-el-sub
-								.left-menu-el-sub-icon
-									.icon-Mypage
-								.left-menu-el-sub-text Моя страница
-							.left-menu-el-sub
-								.left-menu-el-sub-icon
-									.icon-Catalog
-								.left-menu-el-sub-text Каталог услуг
-							.left-menu-el-sub
-								.left-menu-el-sub-icon
-									.icon-Mytasks
-								.left-menu-el-sub-text Мои задачи
-							.left-menu-el-sub
-								.left-menu-el-sub-icon
-									.icon-Knowledge
-								.left-menu-el-sub-text База знаний
-							.left-menu-el-sub
-								.left-menu-el-sub-icon
-									.icon-Settings
-								.left-menu-el-sub-text Мои настройки
+		include ./block_html/left-part.jade
+		
 		.main-right
 			//Top menu
-			.main-right-head
-				.main-right-head-input
-					input(type="text")
-					.icon-Search
-				.main-right-head-add
-					.icon-Add
-				.main-right-head-message
-					.icon-Message
-						.main-right-head-message-val 15
-				.main-right-head-name
-					.main-right-head-name-inic 
-						span ИИ
-					.main-right-head-name-text Иванов Иван Иванович
+			include ./block_html/top-menu.jade
+			
 			//Tabs
 			.main-right-top-tabs
 				.main-right-top-tabs-el.main-right-top-tabs-el-active

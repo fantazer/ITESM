@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+html(lang="en")
+	//Include header
+	include ./block_html/head.jade
+body
+	.main-cont
+		include ./block_html/left-part.jade
+		
+		.main-right
+			//Top menu
+			include ./block_html/top-menu.jade
+			.main-right-content-breadcrumbs
+				a(href="#") Моя страница
+				a(href="#") Сообщить о проблеме
+
+			//Main-content
+			.main-right-content
+				.main-right-content-formBut
+					.main-right-content-formBut-el.main-right-content-formBut-el-active Создать
+					.main-right-content-formBut-el Отменить
+					.main-right-content-formBut-el Сохранить и выйти
+				.main-right-formCol-wraper
+					//left coll
+					.main-right-formCol
+						.main-right-formCol-el
+								.main-right-formCol-el-title
+									.main-right-formCol-el-title-icon
+									.main-right-formCol-el-title-text Основные параметры инцидента
+								.main-right-formCol-el-cont
+									
+									.main-right-formCol-el-row-half
+										.main-right-formCol-row-item
+											span Номер
+											input(type="text")
+										.main-right-formCol-row-item
+											span Статус
+											input(type="text")
+									
+									.main-right-formCol-el-row-full
+										.main-right-formCol-row-item
+											span Инициатор
+											input(type="text")
+									
+									.main-right-formCol-el-row-full
+										.main-right-formCol-row-item
+											span Пользователь
+											input(type="text")
+									
+									.main-right-formCol-el-row-full
+										.main-right-formCol-row-item
+											span Где искать:
+											input(type="text")
+									
+									.main-right-formCol-el-row-half
+										.main-right-formCol-row-item
+											span Услуга
+											input(type="text")
+										.main-right-formCol-row-item
+											span Приоритет:
+											input(type="text")
+
+									.main-right-formCol-el-row-half
+										.main-right-formCol-row-item
+											span Степень вовлеченности:
+											input(type="text")
+										.main-right-formCol-row-item
+											span Степень влияния:
+											input(type="text")
+
+									.main-right-formCol-el-row-half
+										.main-right-formCol-row-item
+											span Ответсвенная группа:
+											input(type="text")
+										.main-right-formCol-row-item
+											span Ответсвенный сотрудник
+											input(type="text")
+
+									.main-right-formCol-el-row-half
+										.main-right-formCol-row-item
+											span Спсобо обращения:
+											input(type="text")
+										.main-right-formCol-row-item
+											span Тип:
+											input(type="text")
+
+									.main-right-formCol-el-row-full
+										.main-right-formCol-row-item
+											span Тема:
+											input(type="text")
+									.main-right-formCol-el-row-full
+										.main-right-formCol-row-item
+											span Тема:
+											textarea(type="text")
+					//right coll
+					.main-right-formCol
+						//item form
+						.main-right-formCol-el
+								.main-right-formCol-el-title
+									.main-right-formCol-el-title-icon
+									.main-right-formCol-el-title-text Временные характеристики
+								.main-right-formCol-el-cont
+									.main-right-formCol-el-row-half
+										.main-right-formCol-row-item
+											span Дата создания
+											input(type="text")
+										.main-right-formCol-row-item
+											span Плановая дата завершения
+											input(type="text")
+									
+									.main-right-formCol-el-row-half
+											.main-right-formCol-row-item
+												span SLA:
+												input(type="text")
+											.main-right-formCol-row-item
+												span Регламентная дата решения:
+												input(type="text")
+									
+									.main-right-formCol-el-row-half
+											.main-right-formCol-row-item
+												span Время решения:
+												input(type="text")
+											.main-right-formCol-row-item
+												span Время закрытия:
+												input(type="text")
+									
+									.main-right-formCol-el-row-half
+											.main-right-formCol-row-item
+												span Время прерывания сервиса:
+												input(type="text")
+											.main-right-formCol-row-item
+												span Время востановления сервиса
+												input(type="text")
+						
+						//item form
+						.main-right-formCol-el
+								.main-right-formCol-el-title
+									.main-right-formCol-el-title-icon
+									.main-right-formCol-el-title-text Диагностика и решение
+								.main-right-formCol-el-cont
+									.main-right-formCol-el-row-full
+										.main-right-formCol-row-item
+											span Причина инцидента:
+											input(type="text")
+									.main-right-formCol-el-row-full
+										.main-right-formCol-row-item
+											span Связанная КЕ:
+											input(type="text")
+									.main-right-formCol-el-row-full
+										.main-right-formCol-row-item
+											span КЕ, на которой проводились работы
+											input(type="text")
+						
+						//item form
+						.main-right-formCol-el.main-right-formCol-el-file
+								.main-right-formCol-el-title
+									.main-right-formCol-el-title-icon
+									.main-right-formCol-el-title-text Файлы
+									.icon-Add
+								.main-right-formCol-el-cont
+									.main-right-formCol-el-table
+										table
+												thead
+													tr
+														th №
+														th Название
+														th Дата добавления
+														th Размер (Кб)
+												tbody
+													tr
+														td
+														td
+														td
+														td
+	//Include Footer
+	include ./block_html/script.jade

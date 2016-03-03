@@ -1,0 +1,36 @@
+.main-left
+	.left-logo 
+		span ITESM
+	.left-menu
+		- var menu = [' Мои страницы ',' Управление инцидентами ',' Управление запросами на обслуживание ',' Управление проблемами ',' Управление изменениями ']
+		- each val in menu 
+			.left-menu-el
+				.left-menu-el-top
+					.left-menu-el-icon
+						.icon-My_pages
+					.left-menu-el-text #{val}
+				.left-menu-el-sub-wrap
+					.left-menu-el-sub
+						.left-menu-el-sub-icon
+							.icon-Workplace
+						.left-menu-el-sub-text Рабочее место
+					.left-menu-el-sub
+						.left-menu-el-sub-icon
+							.icon-Mypage
+						.left-menu-el-sub-text Моя страница
+					.left-menu-el-sub
+						.left-menu-el-sub-icon
+							.icon-Catalog
+						.left-menu-el-sub-text Каталог услуг
+					.left-menu-el-sub
+						.left-menu-el-sub-icon
+							.icon-Mytasks
+						.left-menu-el-sub-text Мои задачи
+					.left-menu-el-sub
+						.left-menu-el-sub-icon
+							.icon-Knowledge
+						.left-menu-el-sub-text База знаний
+					.left-menu-el-sub
+						.left-menu-el-sub-icon
+							.icon-Settings
+						.left-menu-el-sub-text Мои настройки

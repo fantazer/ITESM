@@ -26,6 +26,10 @@ $(document).ready(function(){
 			$(this).css('background-color','#E1523E')
 		}
 	})
+
+	$('.main-right-formCol-el-title').click(function(){
+		$(this).next('.main-right-formCol-el-cont').slideToggle()
+	})
 	/* ###### init EasyDropDown style for selects  ######*/
 	/* ###### bower i easydropdown  ######*/
 	/*<select class="dropdown"> add class (dropdown)

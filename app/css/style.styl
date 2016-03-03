@@ -15,10 +15,6 @@ darkblue = #005FA3;
 deepblue = #004F8A;
 bordergrey = #D1D1D1;
 black = #413E3E;
-.main-cont
-	center(1280px)
-	height 100% 
-
 body,html
 	height 100%
 body
@@ -28,12 +24,15 @@ body
 	color #413E3E
 	background: #06486A;
 
+.main-cont
+	center(1280px)
+	display flex
+	min-height 100%
 .main-left
-	span(0.22)
+	width 22%
 	background blue
-	height 100%
 .main-right	
-	span(0.78)
+	width 78%
 	
 .left-logo
 	padding-left 30px
@@ -50,7 +49,7 @@ body
 
 .main-right
 	border-right 1px solid bordergrey
-	height 100%
+	background white
 .main-right-head
 	display flex
 	height 75px
@@ -221,6 +220,7 @@ body
 .main-right-content-wraper
 	margin-top 50px
 	display flex
+	height calc(100% - 120px)
 .col-open-message
 	span(0.5)
 .main-right-content-wraper-title
@@ -320,3 +320,114 @@ body
 	height 10px
 	background #00B8DF
 	border-radius  3px 0px 0px 3px
+	
+.main-right-content-breadcrumbs
+	flex(mid)
+	justify-content flex-start
+	height 51px
+	background #F3F7FA
+	padding-left 30px
+	border-bottom 1px solid bordergrey
+	a
+		color black
+		text-decoration none
+		margin-right 10px
+		&:after
+			content '/'
+			margin-left 10px
+		&:last-child
+			&:after
+				content ''
+			color blue
+			
+.main-right-content-formBut
+	margin-bottom 20px
+	flex(mid)
+	justify-content flex-start
+.main-right-content-formBut-el
+	margin-right 20px
+	padding 10px 20px
+	border 1px solid bordergrey
+	background #F3F7FA
+	color blue
+	&:hover
+		cursor pointer
+.main-right-content-formBut-el-active
+	background #00CD79
+	border 1px solid #00C571
+	color white
+.main-right-formCol-wraper
+	display flex
+.main-right-formCol
+	width 48%
+	margin-right 20px
+	&:nth-child(2)
+		margin-right 0
+.main-right-formCol-el
+	margin-bottom 20px
+.main-right-formCol-el-cont
+	padding 20px
+	background #F3F7FA
+.main-right-formCol-el-title
+	padding 10px
+	background darkblue
+	color white
+	flex(mid)
+	justify-content flex-start
+	&:hover
+		cursor pointer
+.main-right-formCol-el-title-icon
+	triangle : 'down' 5px white
+	margin-right 10px
+//.main-right-formCol-el-title-text
+
+.main-right-formCol-el-row-half
+	width 100%
+	flex(mid)
+	justify-content flex-start
+	margin-bottom 20px
+	span
+		display inline-block
+		width 100%
+		margin-bottom 5px
+		font-size 12px
+	input,textarea
+		width 100%
+		border 1px solid bordergrey
+		padding 5px
+	.main-right-formCol-row-item
+		width 48%
+		margin-left 20px
+		&:first-child
+			margin-left 0
+			
+.main-right-formCol-el-row-full
+	width 100%
+	flex(mid)
+	justify-content flex-start
+	margin-bottom 20px
+	span
+		display inline-block
+		width 100%
+		margin-bottom 5px
+		font-size 12px
+	input,textarea
+		border 1px solid bordergrey
+		width 100%
+		padding 5px
+	.main-right-formCol-row-item
+		width 100%
+.main-right-formCol-el-file
+	.main-right-formCol-el-title
+		position relative
+		.icon-Add
+			position absolute
+			right 10px
+			font-size 24px
+			line-height 18px
+			
+.main-right-formCol-el-table
+	table
+		table(true,true)
+		th 
+			font-weight 300
