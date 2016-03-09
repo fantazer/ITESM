@@ -27,6 +27,20 @@ $(document).ready(function(){
 		}
 	})
 
+	$('.main-right-top-tabs-el').click(function(){
+		var activeTab = $(this).data('tabs');
+		$('.main-right-top-tabs-el').each(function(){
+			$(this).removeClass('main-right-top-tabs-el-active');
+		})
+		$(this).addClass('main-right-top-tabs-el-active');
+		$('.tabs-wraper').each(function(){
+			var wrapTab = $(this).data('tabswrap');
+			$(this).removeClass('active-tabs');
+			if (activeTab===wrapTab) {
+				$(this).addClass('active-tabs');
+			};
+		})
+	})
 	$('.main-right-formCol-el-title').click(function(){
 		$(this).next('.main-right-formCol-el-cont').slideToggle()
 	})
