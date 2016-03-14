@@ -9,7 +9,18 @@
     });
  })(jQuery);*/ 
 
+
 $(document).ready(function(){
+
+	$(function() {
+	    $('.chart').easyPieChart({
+	    	animate: 2000,
+	        trackColor: "#eee",
+	        barColor: "#007ebe",
+	        size: "80",
+	        lineWidth: "5"
+	    });
+	});
 	$('.left-menu-el').click(function(){
 		$(this).find('.left-menu-el-sub-wrap').slideToggle()
 	})

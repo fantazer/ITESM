@@ -80,23 +80,42 @@ body
 									.col-top-message-el-text
 										span Как создать запрос на обслуживание?
 				.tabs-wraper(data-tabswrap="Incident")
-					.service-line
-						.service-line-el
-							.service-line-el-icon
-								.icon-technology-call
-							.service-line-el-text Сообщить о проблеме
-						.service-line-el
-							.service-line-el-icon
-								.icon-tool
-							.service-line-el-text Запросить услугу
-						.service-line-el
-							.service-line-el-icon
-								.icon-questions
-							.service-line-el-text Получит консультацию
-						.service-line-el
-							.service-line-el-icon
-								.icon-stack-of-books-and-magnifier
-							.service-line-el-text Поиск по базе знаний
+					.incident-top
+						.incident-top-but
+							.incident-top-but-text Все открытые события моих групп
+							.incident-top-but-icon
+								.icon-arrows
+						.incident-top-filter
+							.icon-filter-outline
+					table.table-incident
+						thead
+							tr
+								th Событие
+								th Статус
+								th Приорите 
+								th Пользователь
+								th Ответсвенный
+								th Дата создания
+								th Дата решения
+								th Потраченное время
+						tbody
+							- for (var a = 0; a < 4; a++)
+								tr
+									td
+										.table-incident-first-td 
+											div 
+												input(type="checkbox")
+											span Lorem ipsum dolor sit.
+									td  Lorem ipsum dolor sit.
+									td  Lorem ipsum dolor sit.
+									td  Lorem ipsum dolor sit.
+									td  Lorem ipsum dolor sit.
+									td  Lorem ipsum dolor sit.
+									td  Lorem ipsum dolor sit.
+									td  
+										.chart(data-percent="73") 
+											span 73%
+
 					
 	//Include Footer
 	include ./block_html/script.jade

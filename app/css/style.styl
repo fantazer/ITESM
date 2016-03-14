@@ -14,7 +14,7 @@ blue = #007EBE;
 darkblue = #005FA3;
 deepblue = #004F8A;
 bordergrey = #D1D1D1;
-black = #413E3E;
+black = #413E3E;	
 body,html
 	height 100%
 body
@@ -464,3 +464,58 @@ body
 			
 input::-ms-clear
 	display: none;
+
+.incident-top
+	display flex
+	justify-content flex-start
+.incident-top-but
+	background #F3F7FA
+	margin-right 10px
+.incident-top-but-icon
+	padding 0 10px
+	flex(mid)
+	background #eee
+.incident-top-but-text
+	padding 10px 20px
+	color blue
+.incident-top-but
+	display flex
+	justify-content flex-start
+	border 1px solid #eee
+	border-bottom 3px solid #eee
+.incident-top-filter
+	flex(mid)
+	color white
+	padding 10px
+	background blue
+	font-size 20px
+//.icon-filter-outline
+
+.table-incident
+	table(true,true)
+	margin-top 20px
+	th
+		background blue
+		color white
+		font-weight 200
+		vertical-align middle!important
+		text-align:center
+	td
+		font-size 12px
+.table-incident-first-td 
+	display flex
+	align-items flex-start
+	input
+		margin-right 10px
+		
+.chart
+	position relative
+	width 80px
+	margin 0 auto
+	span
+		position absolute
+		top 50%	
+		width 80px
+		text-align center
+		font-size 16px
+		margin-top: -11px

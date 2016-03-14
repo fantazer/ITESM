@@ -19,6 +19,15 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.icon-arrows:before {
+  content: "\e911";
+}
+.icon-close:before {
+  content: "\e912";
+}
+.icon-filter-outline:before {
+  content: "\e913";
+}
 .icon-Add:before {
   content: "\e900";
 }
@@ -1108,4 +1117,177 @@ body {
 }
 input::-ms-clear {
   display: none;
+}
+.incident-top {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+.incident-top-but {
+  background: #f3f7fa;
+  margin-right: 10px;
+}
+.incident-top-but-icon {
+  padding: 0 10px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #eee;
+}
+.incident-top-but-text {
+  padding: 10px 20px;
+  color: #007ebe;
+}
+.incident-top-but {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  border: 1px solid #eee;
+  border-bottom: 3px solid #eee;
+}
+.incident-top-filter {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+  padding: 10px;
+  background: #007ebe;
+  font-size: 20px;
+}
+.table-incident {
+  max-width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  margin-bottom: 18px;
+  border: 1px solid #ddd;
+  border-collapse: separate;
+  *border-collapse: collapsed;
+  -webkit-border-radius: 4px;
+          border-radius: 4px;
+  margin-top: 20px;
+}
+.table-incident th,
+.table-incident td {
+  padding: 8px;
+  line-height: 18px;
+  text-align: left;
+  vertical-align: top;
+  border-top: 1px solid #ddd;
+}
+.table-incident th {
+  font-weight: bold;
+}
+.table-incident thead th {
+  vertical-align: bottom;
+}
+.table-incident thead:first-child tr th,
+.table-incident thead:first-child tr td {
+  border-top: 0;
+}
+.table-incident tbody + tbody {
+  border-top: 2px solid #ddd;
+}
+.table-incident th + th,
+.table-incident td + td,
+.table-incident th + td,
+.table-incident td + th {
+  border-left: 1px solid #ddd;
+}
+.table-incident thead:first-child tr:first-child th,
+.table-incident tbody:first-child tr:first-child th,
+.table-incident tbody:first-child tr:first-child td {
+  border-top: 0;
+}
+.table-incident thead:first-child tr:first-child th:first-child,
+.table-incident tbody:first-child tr:first-child td:first-child {
+  -webkit-border-radius: 4px 0 0 0;
+          border-radius: 4px 0 0 0;
+}
+.table-incident thead:first-child tr:first-child th:last-child,
+.table-incident tbody:first-child tr:first-child td:last-child {
+  -webkit-border-radius: 0 4px 0 0;
+          border-radius: 0 4px 0 0;
+}
+.table-incident thead:last-child tr:last-child th:first-child,
+.table-incident tbody:last-child tr:last-child td:first-child {
+  -webkit-border-radius: 0 0 0 4px;
+          border-radius: 0 0 0 4px;
+}
+.table-incident thead:last-child tr:last-child th:last-child,
+.table-incident tbody:last-child tr:last-child td:last-child {
+  -webkit-border-radius: 0 0 4px 0;
+          border-radius: 0 0 4px 0;
+}
+.table-incident tbody tr:nth-child(odd) td,
+.table-incident tbody tr:nth-child(odd) th {
+  background-color: #f9f9f9;
+}
+.table-incident tbody tr:hover td,
+.table-incident tbody tr:hover th {
+  background-color: #f5f5f5;
+}
+.table-incident th {
+  background: #007ebe;
+  color: #fff;
+  font-weight: 200;
+  vertical-align: middle !important;
+  text-align: center;
+}
+.table-incident td {
+  font-size: 12px;
+}
+.table-incident-first-td {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.table-incident-first-td input {
+  margin-right: 10px;
+}
+.chart {
+  position: relative;
+  width: 80px;
+  margin: 0 auto;
+}
+.chart span {
+  position: absolute;
+  top: 50%;
+  width: 80px;
+  text-align: center;
+  font-size: 16px;
+  margin-top: -11px;
 }
