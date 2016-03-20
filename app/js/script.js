@@ -55,6 +55,10 @@ $(document).ready(function(){
 	$('.main-right-formCol-el-title').click(function(){
 		$(this).next('.main-right-formCol-el-cont').slideToggle()
 	})
+
+	$('.main-left-sort-title').click(function(){
+		$('.main-left-sort-wraper').slideToggle()
+	})
 	/* ###### init EasyDropDown style for selects  ######*/
 	/* ###### bower i easydropdown  ######*/
 	/*<select class="dropdown"> add class (dropdown)
