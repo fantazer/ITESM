@@ -12,7 +12,7 @@
 
 $(document).ready(function(){
 
-	$(function() {
+	/*$(function() {
 	    $('.chart').easyPieChart({
 	    	animate: 2000,
 	        trackColor: "#eee",
@@ -20,7 +20,7 @@ $(document).ready(function(){
 	        size: "80",
 	        lineWidth: "5"
 	    });
-	});
+	});*/
 	$('.left-menu-el').click(function(){
 		$(this).find('.left-menu-el-sub-wrap').slideToggle()
 	})
@@ -56,9 +56,24 @@ $(document).ready(function(){
 		$(this).next('.main-right-formCol-el-cont').slideToggle()
 	})
 
+	$('.icon-PanelOfPerfomance').click(function(){
+		$('.incedent-hide-tools').slideToggle()
+	})
 	$('.main-left-sort-title').click(function(){
 		$('.main-left-sort-wraper').slideToggle()
 	})
+	$('.icon-EditPerfomance').click(function(){
+		$('.incedent-hide-tools-edit').removeClass('hidden')
+		$('.incedent-hide-tools-view').addClass('hidden')
+	})
+	$('#incident').click()
+
+	//Select
+
+	$('#incident-load').niceSelect();
+	$('#incident-action').niceSelect();
+	$('#incident-hide-tools').niceSelect();
+	$('#incident-hide-edit').niceSelect();
 	/* ###### init EasyDropDown style for selects  ######*/
 	/* ###### bower i easydropdown  ######*/
 	/*<select class="dropdown"> add class (dropdown)

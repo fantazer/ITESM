@@ -8,6 +8,7 @@
     <!--build:css css/vendor.css-->
     <link rel="stylesheet" href="bower/normalize.css/normalize.css"/>
     <link rel="stylesheet" href="bower/components-font-awesome/css/font-awesome.css"/>
+    <link rel="stylesheet" href="bower/jquery-nice-select/css/nice-select.css"/>
     <!--link(rel="stylesheet", href="bower/components-font-awesome/css/font-awesome.css")-->
     <!--endbuild-->
     <link rel="stylesheet" href="css/style.css"/>
@@ -274,10 +275,10 @@
       <!--Tabs-->
       <div class="main-right-top-tabs">
         <div data-tabs="Portal" class="main-right-top-tabs-el main-right-top-tabs-el-active"><span>Портал</span></div>
-        <div data-tabs="Incident" class="main-right-top-tabs-el"><span>Инциденты</span></div>
+        <div data-tabs="Incident" id="incident" class="main-right-top-tabs-el"><span>Инциденты</span></div>
         <div data-tabs="Portal" class="main-right-top-tabs-el"><span>Запросы </span></div>
         <div data-tabs="Portal" class="main-right-top-tabs-el"><span>Изменения</span></div>
-        <div data-tabs="Portal" class="main-right-top-tabs-el"><span>Согласования</span></div>
+        <div data-tabs="Portal" class="main-right-top-tabs-el"><span>Согласования!</span></div>
       </div>
       <!--Main-content-->
       <div class="main-right-content">
@@ -436,14 +437,58 @@
         </div>
         <div data-tabswrap="Incident" class="tabs-wraper">
           <div class="incident-top">
-            <div class="incident-top-but">
-              <div class="incident-top-but-text">Все открытые события моих групп</div>
-              <div class="incident-top-but-icon">
-                <div class="icon-arrows"></div>
+            <div class="row-button">
+              <div class="button-el icon-Add"></div>
+              <div class="button-el icon-Edit"></div>
+              <div class="button-el icon-Delete"></div>
+              <div class="button-el icon-Filter button-el-active"></div>
+            </div>
+            <select id="incident-load" class="nice-select">
+              <option data-display="Выгрузить"></option>
+              <option value="1">Москва</option>
+              <option value="2">Волгоград</option>
+              <option value="2">Уфа</option>
+            </select>
+            <select id="incident-action">
+              <option data-display="Некоторое групповое действие"></option>
+              <option value="1">Магадан</option>
+              <option value="2">Улан-уде</option>
+              <option value="2">Кастрома</option>
+            </select>
+            <div class="button-el icon-PanelOfPerfomance button-el-active"></div>
+          </div>
+          <div class="incedent-hide-tools">
+            <div class="incedent-hide-tools-view">
+              <div class="incedent-hide-tools-select">
+                <text>Для просмотра и представления выберите прадставление из выпадающего списка:</text>
+                <select id="incident-hide-tools">
+                  <option data-display="Некоторое представление"></option>
+                  <option value="1">Магадан</option>
+                  <option value="2">Улан-уде</option>
+                  <option value="2">Кастрома</option>
+                </select>
+              </div>
+              <div class="incedent-hide-tools-but">
+                <div class="button-el icon-EditPerfomance"></div>
+                <div class="button-el icon-square"></div>
               </div>
             </div>
-            <div class="incident-top-filter">
-              <div class="icon-filter-outline"></div>
+            <div class="incedent-hide-tools-edit hidden"><i class="fa fa-times"></i>
+              <div class="incedent-hide-tools-edit-title"><a href="#"><i class="fa fa-angle-left"></i></a><span>Панель представлений /</span><a href="#">Режим редактирования</a></div>
+              <div class="incedent-hide-tools-edit-cont">
+                <div class="row-button">
+                  <div class="button-el icon-GeneralSettings"></div>
+                  <div class="button-el icon-SettingsOfFilters"></div>
+                  <div class="button-el icon-Format"></div>
+                  <div class="button-el icon-circle"></div>
+                </div><a href="#" class="incedent-hide-tools-edit-save"> <span>Сохранить</span></a>
+                <select id="incident-hide-edit">
+                  <option data-display="Сохранить как"></option>
+                  <option value="1">Магадан</option>
+                  <option value="2">Улан-уде</option>
+                  <option value="2">Кастрома</option>
+                </select>
+              </div>
             </div>
           </div>
           <table class="table-incident">
@@ -542,6 +587,7 @@
   <!--build:js js/combined.js-->
   <script src="bower/jquery/dist/jquery.js"></script>
   <script src="bower/jquery.easy-pie-chart/dist/jquery.easypiechart.js"></script>
+  <script src="bower/jquery-nice-select/js/jquery.nice-select.min.js"></script>
   <!-- endbuild-->
   <script src="js/script.js"></script>
 </body>

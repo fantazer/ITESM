@@ -23,7 +23,32 @@ body
 	font-weight 300
 	color #413E3E
 	background: #06486A;
+flex(a){
+	if(a=='mid'){
+		display: flex;
+	  justify-content: center;
+	  align-items: center;
+	}
+	if(a==between){
+		display: flex;
+	  justify-content: space-between;
+	  align-items: center;
+	}
+	if(a==around){
+		display: flex;
+	  justify-content: space-around;
+	  align-items: center;
+	}
+}
 
+f()
+	display flex
+fl()
+	flex-flow column
+fw()
+	flex-wrap wrap
+.hidden
+	display none!important
 .main-cont
 	center(100%)
 	display flex
@@ -112,7 +137,8 @@ body
 		font-size 12px
 		font-weight 300
 		line-height 24px
-		
+.icon-circle
+	font-size 24px
 .main-right-head-name
 	flex(mid)
 .main-right-head-name-inic
@@ -203,7 +229,7 @@ body
 	position relative
 	&:hover
 		cursor pointer
-	
+
 .left-menu-el-top
 	flex(mid)
 	justify-content flex-start
@@ -474,8 +500,10 @@ input::-ms-clear
 	display: none;
 
 .incident-top
-	display flex
+	flex(mid)
 	justify-content flex-start
+	.nice-select
+		margin 0 10px
 .incident-top-but
 	background #F3F7FA
 	margin-right 10px
@@ -537,3 +565,99 @@ input::-ms-clear
 	margin-left 20px
 .tabs-wraper-portal
 	display flex
+	
+.button-el
+	font-size 42px
+	background #F3F7FA
+	margin 5px
+	border-radius 50%
+	border 1px solid #D7DCDF
+	width 50px
+	height 50px
+	text-align center
+	color #007EBE
+	line-height 48px
+	&:hover
+		cursor pointer
+.button-el.icon-Add
+	font-size 25px
+	background #00CD79
+	color white
+	line-height 50px
+	border 1px solid #05A765
+.icon-square
+	font-size 25px
+.button-el-active
+	color white
+	background #0073B7
+	
+.row-button
+	flex(mid)
+	margin-right 10px
+.nice-select
+	line-height 48px
+	height 50px
+	ul.list
+		width 100%
+	.option
+		&:first-child
+			opacity 0
+			height 0px!important
+			display block
+			min-height 0px
+			
+.incedent-hide-tools
+	padding 20px
+	border 2px dotted #DEE0E2
+	margin-top 20px
+	display none
+	.nice-select
+		margin-top 10px
+		margin-right 10px
+	.button-el
+		margin-bottom 0
+.incedent-hide-tools-view
+	f()
+	align-items flex-end
+.incedent-hide-tools-select
+	f()
+	fl()
+	width 50%
+.incedent-hide-tools-but
+	f()
+.incedent-hide-tools-edit
+	position relative
+	.nice-select
+		margin 0
+		margin 0 15px
+	.fa-times
+		position absolute
+		top -10px
+		right -10px
+		font-size 16px
+		&:hover
+			cursor pointer
+.incedent-hide-tools-edit-title
+	f()
+	.fa
+		margin-right 10px
+		font-size 16px
+		color blue
+	span
+		margin-right 5px
+	a
+		text-decoration none
+		color blue
+.incedent-hide-tools-edit-cont
+	flex(mid)
+	margin-top 15px
+	justify-content flex-start
+.incedent-hide-tools-edit-save
+	color white
+	display inline-block
+	text-decoration none
+	background #00CD79
+	flex(mid)
+	padding 0 25px
+	height 50px
+//.button-el
