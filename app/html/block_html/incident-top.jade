@@ -1,0 +1,53 @@
+.incident-top
+	.row-button
+		.button-el.icon-Add
+		.button-el.icon-Edit
+		.button-el.icon-Delete
+		.button-el.icon-Filter.button-el-active
+
+	select.nice-select.custom-select
+		option(data-display="Выгрузить")
+		option(value="1") Москва
+		option(value="2") Волгоград
+		option(value="2") Уфа
+
+	select.custom-select
+		option(data-display="Некоторое групповое действие")
+		option(value="1") Магадан
+		option(value="2") Улан-уде
+		option(value="2") Кастрома
+
+	.button-el.icon-PanelOfPerfomance.button-el-active
+
+.incident-hide-tools
+	.incident-hide-tools-view
+		.incident-hide-tools-select
+			text Для просмотра и представления выберите прадставление из выпадающего списка:
+			select.custom-select
+				option(data-display="Некоторое представление")
+				option(value="1") Магадан
+				option(value="2") Улан-уде
+				option(value="2") Кастрома
+		.incident-hide-tools-but
+			.button-el.icon-EditPerfomance
+			.button-el.icon-square
+	.incident-hide-tools-edit.hidden
+		i.fa.fa-times
+		.incident-hide-tools-edit-title
+			a(href="#")
+				i.fa.fa-angle-left
+			span Панель представлений /
+			a(href="#") Режим редактирования
+		.incident-hide-tools-edit-cont
+			.row-button
+				.button-el.icon-GeneralSettings
+				.button-el.icon-SettingsOfFilters
+				.button-el.icon-Format
+				.button-el.icon-circle
+			a(href="#").incident-hide-tools-edit-save 
+				span Сохранить
+			select.custom-select
+				option(data-display="Сохранить как")
+				option(value="1") Магадан
+				option(value="2") Улан-уде
+				option(value="2") Кастрома

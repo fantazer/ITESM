@@ -19,6 +19,7 @@
     "components-font-awesome": "~4.3.0"
   },
   "devDependencies": {
-    "jquery-nice-select": "*"
+    "jquery-nice-select": "*",
+    "bPopup": "bpopup#^0.11.0"
   }
 }

@@ -25,60 +25,11 @@ body
 			//Main-content
 			.main-right-content
 				include ./block_html/tab-portal.jade
+				
 				.tabs-wraper(data-tabswrap="Incident")
-					.incident-top
-						.row-button
-							.button-el.icon-Add
-							.button-el.icon-Edit
-							.button-el.icon-Delete
-							.button-el.icon-Filter.button-el-active
 
-						select.nice-select#incident-load
-							option(data-display="Выгрузить")
-							option(value="1") Москва
-							option(value="2") Волгоград
-							option(value="2") Уфа
+					include ./block_html/incident-top.jade
 
-						select#incident-action
-							option(data-display="Некоторое групповое действие")
-							option(value="1") Магадан
-							option(value="2") Улан-уде
-							option(value="2") Кастрома
-
-						.button-el.icon-PanelOfPerfomance.button-el-active
-
-					.incedent-hide-tools
-						.incedent-hide-tools-view
-							.incedent-hide-tools-select
-								text Для просмотра и представления выберите прадставление из выпадающего списка:
-								select#incident-hide-tools
-									option(data-display="Некоторое представление")
-									option(value="1") Магадан
-									option(value="2") Улан-уде
-									option(value="2") Кастрома
-							.incedent-hide-tools-but
-								.button-el.icon-EditPerfomance
-								.button-el.icon-square
-						.incedent-hide-tools-edit.hidden
-							i.fa.fa-times
-							.incedent-hide-tools-edit-title
-								a(href="#")
-									i.fa.fa-angle-left
-								span Панель представлений /
-								a(href="#") Режим редактирования
-							.incedent-hide-tools-edit-cont
-								.row-button
-									.button-el.icon-GeneralSettings
-									.button-el.icon-SettingsOfFilters
-									.button-el.icon-Format
-									.button-el.icon-circle
-								a(href="#").incedent-hide-tools-edit-save 
-									span Сохранить
-								select#incident-hide-edit
-									option(data-display="Сохранить как")
-									option(value="1") Магадан
-									option(value="2") Улан-уде
-									option(value="2") Кастрома
 					table.table-incident
 						thead
 							tr
@@ -107,6 +58,83 @@ body
 									td  
 										.chart(data-percent="73") 
 											span 73%
+	//Modal
+	.incident-modal
+		i.fa.fa-times.incident-modal-close
+		//Modal-header
+		.incident-modal-head
+			.incident-modal-title Режим создания представления
+			.row-button
+				.button-el.icon-GeneralSettings.button-el-active(data-modal-tab='one')
+				.button-el.icon-SettingsOfFilters(data-modal-tab='two')
+				.button-el.icon-Format(data-modal-tab='three')
+				.button-el.icon-circle(data-modal-tab='four')
+				a(href="#").big-btn-green(data-modal-tab='five')
+					span Сохранить
+				select.custom-select
+					option(data-display="Сохранить как")
+					option(value="1") Магадан
+					option(value="2") Улан-уде
+					option(value="2") Кастрома
+		//Modal-wraper-one
+		.incident-modal-wraper.incident-modal-settings(data-modal-wraper='one')
+			.incident-modal-content
+				.incident-modal-breadcrumbs
+					a(href="#") Настройки прав
+				.input-row
+					label Наименовение представления:
+					input(type="text")
+				.input-row
+					label Список доступных свойств:
+				.incident-modal-settings-prop
+						.incident-modal-settings-prop-el
+							- for (var a = 0; a <20 ; a++)
+								.incident-modal-settings-prop-row
+									span Услуга
+									span +
+						.incident-modal-settings-prop-el
+							- for (var a = 0; a <20 ; a++)
+								.incident-modal-settings-prop-row
+									span Услуга
+									span -
+			.incident-modal-footer
+				a(href="#").big-btn-green 
+						span Сохранить
+				a(href="#").big-btn-default 
+						span Отменить
 
+		//Modal-wraper-three
+		.incident-modal-wraper.incident-modal-sort.hidden(data-modal-wraper='three')
+			.incident-modal-content
+				.incident-modal-breadcrumbs
+					a(href="#") Настройки Сортировки
+				.input-row
+					a(href="#").add-button + Добавить
+
+				- for (var a = 0; a <2 ; a++)
+					.incident-modal-sort-el
+						.incident-modal-sort-el-title Уровень 1
+						.incident-modal-sort-el-wraper
+							i.fa.fa-times
+							.input-row
+								label Свойства:
+								select.custom-select
+									option(data-display="Значение")
+									option(value="1") Магадан
+									option(value="2") Улан-уде
+									option(value="2") Кастрома
+							.input-row
+								label Тип:
+								select.custom-select
+									option(data-display="Значение")
+									option(value="1") Магадан
+									option(value="2") Улан-уде
+									option(value="2") Кастрома
+
+			.incident-modal-footer
+				a(href="#").big-btn-green 
+						span Сохранить
+				a(href="#").big-btn-default 
+						span Отменить
 	//Include Footer
 	include ./block_html/script.jade

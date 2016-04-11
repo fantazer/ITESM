@@ -23,6 +23,8 @@ body
 	font-weight 300
 	color #413E3E
 	background: #06486A;
+a
+	text-decoration none
 flex(a){
 	if(a=='mid'){
 		display: flex;
@@ -138,7 +140,7 @@ fw()
 		font-weight 300
 		line-height 24px
 .icon-circle
-	font-size 24px
+	font-size 28px!important
 .main-right-head-name
 	flex(mid)
 .main-right-head-name-inic
@@ -597,6 +599,7 @@ input::-ms-clear
 .nice-select
 	line-height 48px
 	height 50px
+	border-radius 0
 	ul.list
 		width 100%
 	.option
@@ -606,7 +609,7 @@ input::-ms-clear
 			display block
 			min-height 0px
 			
-.incedent-hide-tools
+.incident-hide-tools
 	padding 20px
 	border 2px dotted #DEE0E2
 	margin-top 20px
@@ -616,16 +619,16 @@ input::-ms-clear
 		margin-right 10px
 	.button-el
 		margin-bottom 0
-.incedent-hide-tools-view
+.incident-hide-tools-view
 	f()
 	align-items flex-end
-.incedent-hide-tools-select
+.incident-hide-tools-select
 	f()
 	fl()
 	width 50%
-.incedent-hide-tools-but
+.incident-hide-tools-but
 	f()
-.incedent-hide-tools-edit
+.incident-hide-tools-edit
 	position relative
 	.nice-select
 		margin 0
@@ -637,7 +640,7 @@ input::-ms-clear
 		font-size 16px
 		&:hover
 			cursor pointer
-.incedent-hide-tools-edit-title
+.incident-hide-tools-edit-title
 	f()
 	.fa
 		margin-right 10px
@@ -648,11 +651,11 @@ input::-ms-clear
 	a
 		text-decoration none
 		color blue
-.incedent-hide-tools-edit-cont
+.incident-hide-tools-edit-cont
 	flex(mid)
 	margin-top 15px
 	justify-content flex-start
-.incedent-hide-tools-edit-save
+.incident-hide-tools-edit-save
 	color white
 	display inline-block
 	text-decoration none
@@ -661,3 +664,172 @@ input::-ms-clear
 	padding 0 25px
 	height 50px
 //.button-el
+
+.incident-modal-head
+	position relative
+
+	.nice-select
+		margin 0
+		margin 0 15px
+	.fa-times
+		position absolute
+		top -10px
+		right -10px
+		font-size 16px
+		&:hover
+			cursor pointer
+			
+.incident-modal-head-save
+	color white
+	display inline-block
+	text-decoration none
+	background #00CD79
+	flex(mid)
+	padding 0 25px
+	height 50px
+	
+.big-btn-green
+	color white
+	display inline-block
+	text-decoration none
+	background #00CD79
+	padding 0 25px
+	height 50px
+	line-height 50px
+
+.big-btn-default
+	color blue
+	display inline-block
+	text-decoration none
+	background #F3F7FA
+	padding 0 25px
+	height 50px
+	line-height 50px
+	//border 1px solid #F3F7FA+30%
+		
+.incident-modal
+	padding 25px 20px
+	background white
+	width 40%
+	position relative
+	.row-button
+		padding-bottom 15px
+		border-bottom 2px dotted #e1e1e1
+		f()
+		justify-content flex-start
+.incident-modal-close
+	position absolute
+	top 20px
+	right 20px
+	font-size 20px
+	color blue
+	display block
+	z-index 200
+	&:hover
+		cursor pointer
+.incident-modal-head
+	margin-bottom 15px
+	.big-btn-green
+		margin-left 10px
+.incident-modal-title
+	font-size 12px
+	color blue
+	margin-bottom 15px
+
+.incident-modal-footer
+	.big-btn-green
+		margin-right 10px
+		height 35px
+		line-height 35px
+	.big-btn-default 
+		height 35px
+		line-height 35px
+.incident-modal-breadcrumbs
+	margin-bottom 15px
+	a
+		text-decoration none
+		margin-right 15px
+		position relative
+		&:after
+			content '/'
+			position absolute
+			right -10px
+			top 0px
+		&:last-child
+			color blue
+			&:after
+				content ''
+.incident-modal-content
+	input
+		padding 5px
+		margin-bottom 10px
+		border 1px solid #e1e1e1
+	.input-row
+		width 100%
+		margin-right 15px
+	.nice-select
+		width 100%
+		height 35px
+		line-height 35px
+.input-row
+	margin-bottom 10px
+	label 
+		display block
+		margin-bottom 5px
+	input 
+		width 100%
+
+.incident-modal-settings-prop
+	margin-bottom 15px
+	flex(between)
+.incident-modal-settings-prop-el
+	width 48%
+	border 1px solid #e1e1e1
+	height 250px
+	overflow overlay
+.incident-modal-settings-prop-row
+	flex(between)
+	padding 2px 10px
+	&:hover
+		cursor pointer
+		background #E5E9ED
+		span
+			&:nth-child(2)
+				color blue
+	span
+		&:nth-child(1)
+			font-size 12px
+		&:nth-child(2)
+			margin-right 15px
+			color #e1e1e1
+			font-size 18px
+			
+.add-button
+	color blue
+	background #F3F7FA
+	padding 5px 10px
+	border 1px solid #E5E9ED
+	border-bottom 2px solid #E5E9ED
+	display inline-block
+	margin-bottom 15px
+	
+.incident-modal-sort-el
+	padding 15px	
+	padding-top 25px
+	position relative
+	border 2px dotted #e1e1e1
+	margin-bottom 25px
+	.fa-times
+		position absolute
+		font-size 18px
+		color blue
+		top 10px
+		right 10px
+	.incident-modal-sort-el-title
+		position absolute
+		top -10px
+		left 20px
+		background white
+.incident-modal-sort-el-wraper
+	flex(between)
+	

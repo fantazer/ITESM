@@ -57,23 +57,35 @@ $(document).ready(function(){
 	})
 
 	$('.icon-PanelOfPerfomance').click(function(){
-		$('.incedent-hide-tools').slideToggle()
+		$('.incident-hide-tools').slideToggle()
 	})
 	$('.main-left-sort-title').click(function(){
 		$('.main-left-sort-wraper').slideToggle()
 	})
 	$('.icon-EditPerfomance').click(function(){
-		$('.incedent-hide-tools-edit').removeClass('hidden')
-		$('.incedent-hide-tools-view').addClass('hidden')
+		$('.incident-hide-tools-edit').removeClass('hidden')
+		$('.incident-hide-tools-view').addClass('hidden')
 	})
 	$('#incident').click()
 
 	//Select
+	$('.custom-select').niceSelect();
 
-	$('#incident-load').niceSelect();
-	$('#incident-action').niceSelect();
-	$('#incident-hide-tools').niceSelect();
-	$('#incident-hide-edit').niceSelect();
+
+	$('.incident-modal-head .button-el').click(function(){
+		var activeTab = $(this).data('modal-tab');
+		$('.incident-modal-head .button-el').each(function(){
+			$(this).removeClass('button-el-active');
+		})
+		$(this).addClass('button-el-active');
+		$('.incident-modal-wraper').each(function(){
+			var wrapTab = $(this).data('modal-wraper');
+			$(this).addClass('hidden');
+			if (activeTab===wrapTab) {
+				$(this).removeClass('hidden');
+			};
+		})
+	})
 	/* ###### init EasyDropDown style for selects  ######*/
 	/* ###### bower i easydropdown  ######*/
 	/*<select class="dropdown"> add class (dropdown)
@@ -87,13 +99,13 @@ $(document).ready(function(){
 	/* ###### init bpopup  ######*/
 	/* ###### bower i bpopup  ######*/
 	// Add class hide
-	// $('.section-main-form button').click(function(){
-	//	$('.section-modal').bPopup({
-	// 			closeClass:'section-modal-but',
-	//			position:['auto','auto'], // position center
-	//			follow: [true,false],
-	// 	}); 
-	//})
+	$('.left-logo').click(function(){
+		$('.incident-modal').bPopup({
+				closeClass:'incident-modal-close',
+				position:['auto','auto'], // position center
+				follow: [true,false],
+		}); 
+	})
 
 
 	/* ###### init stickUp  ######*/

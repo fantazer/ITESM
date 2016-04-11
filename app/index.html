@@ -443,13 +443,13 @@
               <div class="button-el icon-Delete"></div>
               <div class="button-el icon-Filter button-el-active"></div>
             </div>
-            <select id="incident-load" class="nice-select">
+            <select class="nice-select custom-select">
               <option data-display="Выгрузить"></option>
               <option value="1">Москва</option>
               <option value="2">Волгоград</option>
               <option value="2">Уфа</option>
             </select>
-            <select id="incident-action">
+            <select class="custom-select">
               <option data-display="Некоторое групповое действие"></option>
               <option value="1">Магадан</option>
               <option value="2">Улан-уде</option>
@@ -457,32 +457,32 @@
             </select>
             <div class="button-el icon-PanelOfPerfomance button-el-active"></div>
           </div>
-          <div class="incedent-hide-tools">
-            <div class="incedent-hide-tools-view">
-              <div class="incedent-hide-tools-select">
+          <div class="incident-hide-tools">
+            <div class="incident-hide-tools-view">
+              <div class="incident-hide-tools-select">
                 <text>Для просмотра и представления выберите прадставление из выпадающего списка:</text>
-                <select id="incident-hide-tools">
+                <select class="custom-select">
                   <option data-display="Некоторое представление"></option>
                   <option value="1">Магадан</option>
                   <option value="2">Улан-уде</option>
                   <option value="2">Кастрома</option>
                 </select>
               </div>
-              <div class="incedent-hide-tools-but">
+              <div class="incident-hide-tools-but">
                 <div class="button-el icon-EditPerfomance"></div>
                 <div class="button-el icon-square"></div>
               </div>
             </div>
-            <div class="incedent-hide-tools-edit hidden"><i class="fa fa-times"></i>
-              <div class="incedent-hide-tools-edit-title"><a href="#"><i class="fa fa-angle-left"></i></a><span>Панель представлений /</span><a href="#">Режим редактирования</a></div>
-              <div class="incedent-hide-tools-edit-cont">
+            <div class="incident-hide-tools-edit hidden"><i class="fa fa-times"></i>
+              <div class="incident-hide-tools-edit-title"><a href="#"><i class="fa fa-angle-left"></i></a><span>Панель представлений /</span><a href="#">Режим редактирования</a></div>
+              <div class="incident-hide-tools-edit-cont">
                 <div class="row-button">
                   <div class="button-el icon-GeneralSettings"></div>
                   <div class="button-el icon-SettingsOfFilters"></div>
                   <div class="button-el icon-Format"></div>
                   <div class="button-el icon-circle"></div>
-                </div><a href="#" class="incedent-hide-tools-edit-save"> <span>Сохранить</span></a>
-                <select id="incident-hide-edit">
+                </div><a href="#" class="incident-hide-tools-edit-save"> <span>Сохранить</span></a>
+                <select class="custom-select">
                   <option data-display="Сохранить как"></option>
                   <option value="1">Магадан</option>
                   <option value="2">Улан-уде</option>
@@ -583,11 +583,145 @@
       </div>
     </div>
   </div>
+  <!--Modal-->
+  <div class="incident-modal"><i class="fa fa-times incident-modal-close"></i>
+    <!--Modal-header-->
+    <div class="incident-modal-head">
+      <div class="incident-modal-title">Режим создания представления</div>
+      <div class="row-button">
+        <div data-modal-tab="one" class="button-el icon-GeneralSettings button-el-active"></div>
+        <div data-modal-tab="two" class="button-el icon-SettingsOfFilters"></div>
+        <div data-modal-tab="three" class="button-el icon-Format"></div>
+        <div data-modal-tab="four" class="button-el icon-circle"></div><a href="#" data-modal-tab="five" class="big-btn-green"><span>Сохранить</span></a>
+        <select class="custom-select">
+          <option data-display="Сохранить как"></option>
+          <option value="1">Магадан</option>
+          <option value="2">Улан-уде</option>
+          <option value="2">Кастрома</option>
+        </select>
+      </div>
+    </div>
+    <!--Modal-wraper-one-->
+    <div data-modal-wraper="one" class="incident-modal-wraper incident-modal-settings">
+      <div class="incident-modal-content">
+        <div class="incident-modal-breadcrumbs"><a href="#">Настройки прав</a></div>
+        <div class="input-row">
+          <label>Наименовение представления:</label>
+          <input type="text"/>
+        </div>
+        <div class="input-row">
+          <label>Список доступных свойств:</label>
+        </div>
+        <div class="incident-modal-settings-prop">
+          <div class="incident-modal-settings-prop-el">
+            <div class="incident-modal-settings-prop-row"><span>Услуга</span><span>+</span></div>
+            <div class="incident-modal-settings-prop-row"><span>Услуга</span><span>+</span></div>
+            <div class="incident-modal-settings-prop-row"><span>Услуга</span><span>+</span></div>
+            <div class="incident-modal-settings-prop-row"><span>Услуга</span><span>+</span></div>
+            <div class="incident-modal-settings-prop-row"><span>Услуга</span><span>+</span></div>
+            <div class="incident-modal-settings-prop-row"><span>Услуга</span><span>+</span></div>
+            <div class="incident-modal-settings-prop-row"><span>Услуга</span><span>+</span></div>
+            <div class="incident-modal-settings-prop-row"><span>Услуга</span><span>+</span></div>
+            <div class="incident-modal-settings-prop-row"><span>Услуга</span><span>+</span></div>
+            <div class="incident-modal-settings-prop-row"><span>Услуга</span><span>+</span></div>
+            <div class="incident-modal-settings-prop-row"><span>Услуга</span><span>+</span></div>
+            <div class="incident-modal-settings-prop-row"><span>Услуга</span><span>+</span></div>
+            <div class="incident-modal-settings-prop-row"><span>Услуга</span><span>+</span></div>
+            <div class="incident-modal-settings-prop-row"><span>Услуга</span><span>+</span></div>
+            <div class="incident-modal-settings-prop-row"><span>Услуга</span><span>+</span></div>
+            <div class="incident-modal-settings-prop-row"><span>Услуга</span><span>+</span></div>
+            <div class="incident-modal-settings-prop-row"><span>Услуга</span><span>+</span></div>
+            <div class="incident-modal-settings-prop-row"><span>Услуга</span><span>+</span></div>
+            <div class="incident-modal-settings-prop-row"><span>Услуга</span><span>+</span></div>
+            <div class="incident-modal-settings-prop-row"><span>Услуга</span><span>+</span></div>
+          </div>
+          <div class="incident-modal-settings-prop-el">
+            <div class="incident-modal-settings-prop-row"><span>Услуга</span><span>-</span></div>
+            <div class="incident-modal-settings-prop-row"><span>Услуга</span><span>-</span></div>
+            <div class="incident-modal-settings-prop-row"><span>Услуга</span><span>-</span></div>
+            <div class="incident-modal-settings-prop-row"><span>Услуга</span><span>-</span></div>
+            <div class="incident-modal-settings-prop-row"><span>Услуга</span><span>-</span></div>
+            <div class="incident-modal-settings-prop-row"><span>Услуга</span><span>-</span></div>
+            <div class="incident-modal-settings-prop-row"><span>Услуга</span><span>-</span></div>
+            <div class="incident-modal-settings-prop-row"><span>Услуга</span><span>-</span></div>
+            <div class="incident-modal-settings-prop-row"><span>Услуга</span><span>-</span></div>
+            <div class="incident-modal-settings-prop-row"><span>Услуга</span><span>-</span></div>
+            <div class="incident-modal-settings-prop-row"><span>Услуга</span><span>-</span></div>
+            <div class="incident-modal-settings-prop-row"><span>Услуга</span><span>-</span></div>
+            <div class="incident-modal-settings-prop-row"><span>Услуга</span><span>-</span></div>
+            <div class="incident-modal-settings-prop-row"><span>Услуга</span><span>-</span></div>
+            <div class="incident-modal-settings-prop-row"><span>Услуга</span><span>-</span></div>
+            <div class="incident-modal-settings-prop-row"><span>Услуга</span><span>-</span></div>
+            <div class="incident-modal-settings-prop-row"><span>Услуга</span><span>-</span></div>
+            <div class="incident-modal-settings-prop-row"><span>Услуга</span><span>-</span></div>
+            <div class="incident-modal-settings-prop-row"><span>Услуга</span><span>-</span></div>
+            <div class="incident-modal-settings-prop-row"><span>Услуга</span><span>-</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="incident-modal-footer"><a href="#" class="big-btn-green"> <span>Сохранить</span></a><a href="#" class="big-btn-default"> <span>Отменить</span></a></div>
+    </div>
+    <!--Modal-wraper-three-->
+    <div data-modal-wraper="three" class="incident-modal-wraper incident-modal-sort hidden">
+      <div class="incident-modal-content">
+        <div class="incident-modal-breadcrumbs"><a href="#">Настройки Сортировки</a></div>
+        <div class="input-row"><a href="#" class="add-button">+ Добавить</a></div>
+        <div class="incident-modal-sort-el">
+          <div class="incident-modal-sort-el-title">Уровень 1</div>
+          <div class="incident-modal-sort-el-wraper"><i class="fa fa-times"></i>
+            <div class="input-row">
+              <label>Свойства:</label>
+              <select class="custom-select">
+                <option data-display="Значение"></option>
+                <option value="1">Магадан</option>
+                <option value="2">Улан-уде</option>
+                <option value="2">Кастрома</option>
+              </select>
+            </div>
+            <div class="input-row">
+              <label>Тип:</label>
+              <select class="custom-select">
+                <option data-display="Значение"></option>
+                <option value="1">Магадан</option>
+                <option value="2">Улан-уде</option>
+                <option value="2">Кастрома</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="incident-modal-sort-el">
+          <div class="incident-modal-sort-el-title">Уровень 1</div>
+          <div class="incident-modal-sort-el-wraper"><i class="fa fa-times"></i>
+            <div class="input-row">
+              <label>Свойства:</label>
+              <select class="custom-select">
+                <option data-display="Значение"></option>
+                <option value="1">Магадан</option>
+                <option value="2">Улан-уде</option>
+                <option value="2">Кастрома</option>
+              </select>
+            </div>
+            <div class="input-row">
+              <label>Тип:</label>
+              <select class="custom-select">
+                <option data-display="Значение"></option>
+                <option value="1">Магадан</option>
+                <option value="2">Улан-уде</option>
+                <option value="2">Кастрома</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="incident-modal-footer"><a href="#" class="big-btn-green"> <span>Сохранить</span></a><a href="#" class="big-btn-default"> <span>Отменить</span></a></div>
+    </div>
+  </div>
   <!--Include Footer-->
   <!--build:js js/combined.js-->
   <script src="bower/jquery/dist/jquery.js"></script>
   <script src="bower/jquery.easy-pie-chart/dist/jquery.easypiechart.js"></script>
   <script src="bower/jquery-nice-select/js/jquery.nice-select.min.js"></script>
+  <script src="bower/bPopup/jquery.bpopup.min.js"></script>
   <!-- endbuild-->
   <script src="js/script.js"></script>
 </body>
